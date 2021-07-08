@@ -1,0 +1,4 @@
+rootProject.name = 'dubbo-parent'
+include 'dubbo-consumer'
+include 'dubbo-provider'
+
