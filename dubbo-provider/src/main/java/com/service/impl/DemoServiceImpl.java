@@ -1,6 +1,8 @@
 package com.service.impl;
 
 import com.service.DemoService;
+import org.apache.dubbo.config.annotation.Service;
+import org.springframework.stereotype.Component;
 
 /**
  * @ClassName DemoServiceImpl
@@ -9,6 +11,8 @@ import com.service.DemoService;
  * @Description DemoServiceImpl
  * @Version 1.0
  */
+
+@Service
 public class DemoServiceImpl implements DemoService {
     @Override
     public String sayHello(String name) {

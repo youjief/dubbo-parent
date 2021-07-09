@@ -10,7 +10,6 @@ import com.alibaba.dubbo.config.annotation.Service;
  * @Version 1.0
  */
 
-@Service
 public interface DemoService {
     public String sayHello(String name);
 }

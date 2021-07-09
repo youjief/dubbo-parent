@@ -17,3 +17,14 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+
+dubbo:
+  application:
+    name: provider
+  protocol:
+    port: 20880
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  scan:
+    base-packages: com.service.impl
+

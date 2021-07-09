@@ -1,8 +1,12 @@
 package com.demo;
 
-import com.alibaba.dubbo.config.annotation.Reference;
 import com.service.DemoService;
-import org.springframework.stereotype.Component;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import org.apache.dubbo.config.annotation.Reference;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @ClassName DemoTest
@@ -11,13 +15,17 @@ import org.springframework.stereotype.Component;
  * @Description DemoTest
  * @Version 1.0
  */
-@Component
+@Api(tags = "Test")
+@RestController
+@RequestMapping(value = "/test")
 public class DemoTest {
     @Reference
     private DemoService demoService;
 
-    public void print(){
+    @ApiOperation(value = "qqqq")
+    @GetMapping(value = "/abc")
+    public String print(){
         System.out.println(demoService);
-        demoService.sayHello("world");
+      return  demoService.sayHello("world");
     }
 }

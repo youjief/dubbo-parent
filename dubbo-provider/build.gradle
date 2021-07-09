@@ -5,7 +5,6 @@ plugins {
 group 'org.example'
 version '1.0-SNAPSHOT'
 
-
 sourceCompatibility = 1.8
 
 repositories {
@@ -13,14 +12,13 @@ repositories {
 }
 
 dependencies {
-// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.5.1'
 
-    compile ("org.apache.zookeeper:zookeeper:3.4.6") {
-        exclude group: 'org.slf4j'
-    }
-    compile ("org.apache.curator:curator-framework:2.12.0")
-
-    compile group: 'com.alibaba', name: 'dubbo', version: '2.6.1'	/*搭载dubbo*/
-    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+/* 子模块项目名，jar名 */
+archivesBaseName = 'dubbo-provider'
+
+jar.enabled = true
+/* 需要org.springframework.boot插件 不需要打包成可执行的jar*/
+bootJar.enabled = false
+

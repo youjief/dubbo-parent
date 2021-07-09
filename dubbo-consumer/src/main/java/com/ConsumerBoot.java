@@ -11,7 +11,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Description ConsumerBoot
  * @Version 1.0
  */
-@EnableDubbo
 @SpringBootApplication
 public class ConsumerBoot {
     public static void main(String[] args) {
