@@ -12,17 +12,6 @@ repositories {
 }
 
 dependencies {
-// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
-//    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.5.1'
-//    compile ("org.apache.zookeeper:zookeeper:3.4.6") {
-//        exclude group: 'org.slf4j'
-//    }
-//    compile ("org.apache.curator:curator-framework:2.12.0")
-//    compile ("org.example:dubbo-provider:1.0-SNAPSHOT")
-//
-//
-//    compile group: 'com.alibaba', name: 'dubbo', version: '2.6.1'	/*搭载dubbo*/
-//    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
 archivesBaseName = 'dubbo-consumer'
@@ -33,6 +22,5 @@ bootJar.enabled = true
 
 dependencies {
 
-    compile project("::dubbo-provider")
-//    implementation project(':dubbo-provider') /* 子模块之间的依赖 */
+    implementation project(':dubbo-provider') /* 子模块之间的依赖 */
 }

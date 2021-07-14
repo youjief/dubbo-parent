@@ -1,5 +1,5 @@
 server:
-  port: 1002
+  port: 1003
 spring:
   datasource:
     password: root
@@ -17,8 +17,7 @@ dubbo:
     name: consumer
   registry:
     address: zookeeper://127.0.0.1:2181
-    group: paopao
   scan:
     base-packages: com.controller
   protocol:
-    port: 20881
+    port: 20882
